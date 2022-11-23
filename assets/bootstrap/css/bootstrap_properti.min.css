@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.head {
+    background: url('../../../images/matahari.jpg') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+}
+
+.masthead {
+    background-image: url('../../../images/bakground.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.confirm-div {
+    position: absolute;
+    margin: 0 auto;
+    left: 580px;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+@media (max-width:768px) {
+    .masthead {
+        min-height: 30vh;
+    }
+
+    h1 {
+        font-size: calc(1.525rem + 3.3vw);
+    }
+}
+
+.tabs {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+}
+
+.tab-control {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+}
+
+.tab-control:hover {
+    color: #4cc41c2d;
+}
+
+.tab-content {
+    border-top: 1px solid#9ACD32;
+    padding: 1rem;
+    border-bottom: 2px solid transparent;
+    border-radius: 0.5rem;
+
+}
+
+.tab-panel {
+    display: none;
+    size-adjust: 50%;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+input [type=radio]:checked+.tab-control {
+    font-weight: 600;
+    color: #3565ff;
+    border-bottom-color: #3565ff;
+    background-color: #9ACD32;
+    border-bottom: 2px solid transparent;
+}
+
+#tab-1:checked~.tab-content>#tab-panel-1 {
+    display: block;
+    background-color: #FFEFD5;
+    border-radius: 0.9rem;
+    width: auto;
+    height: auto;
+}
+
+#tab-2:checked~.tab-content>#tab-panel-2 {
+    display: block;
+    background-color: #FFEFD5;
+    border-radius: 0.9rem;
+}
+
+#tab-3:checked~.tab-content>#tab-panel-3 {
+    display: block;
+    background-color: #FFEFD5;
+    border-radius: 0.9rem;
+}
+
+.hunian {
+    background: url('../../../images/bacground_2.jpg') no-repeat;
+    width: auto;
+    height: auto;
+}
+
+.lokasi {
+    background-color: #8FBC8F;
+}
+
+.card {
+    background-color: #FFEFD5;
+}
+
+section {
+    padding-top: 5rem;
+}

@@ -23,7 +23,7 @@ class Home extends CI_Controller
 	}
 
 	public function small()
-	{	
+	{
 		$data = array(
 			'title' => 'Home',
 			'css'   => array(),
@@ -32,7 +32,7 @@ class Home extends CI_Controller
 		);
 
 		$this->load->view('template/header', $data);
-		$this->load->view('small_view');
+		$this->load->view('Ukuran/small_view');
 		$this->load->view('template/footer');
 	}
 
@@ -46,7 +46,7 @@ class Home extends CI_Controller
 		);
 
 		$this->load->view('template/header', $data);
-		$this->load->view('medium_view');
+		$this->load->view('Ukuran/medium_view');
 		$this->load->view('template/footer');
 	}
 
@@ -60,7 +60,7 @@ class Home extends CI_Controller
 		);
 
 		$this->load->view('template/header', $data);
-		$this->load->view('big_view');
+		$this->load->view('Ukuran/big_view');
 		$this->load->view('template/footer');
 	}
 }

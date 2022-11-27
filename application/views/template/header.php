@@ -50,7 +50,10 @@
                         <a class="nav-link" href="#terdekat">Lokasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contac">contact</a>
+                        <a class="nav-link" href="#contac">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url('')?>">Pemesanan</a>
                     </li>
                 </ul>
             </div>

@@ -2,7 +2,7 @@
 
 class Contact_model extends CI_Model
 {
-
+	var $cont = 'contact';
 	public function insert()
 	{
 
@@ -16,5 +16,10 @@ class Contact_model extends CI_Model
 		);
 
 		$this->db->insert('contact', $data);
+	}
+	public function hapuscontact($id)
+	{
+		$this->db->where('id', $id);
+		return $this->db->delete('contact');
 	}
 }

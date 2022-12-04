@@ -1,27 +1,28 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class ModelBuku extends CI_Model
+class ModelPemesanan extends CI_Model
 {
+    var $table = 'buku';
     //manajemen buku
     public function getBuku()
     {
-        return $this->db->get('buku');
+        return $this->db->get($this->table);
     }
     public function bukuWhere($where)
     {
-        return $this->db->get_where('buku', $where);
+        return $this->db->get_where('user', $where);
     }
     public function simpanBuku($data = null)
     {
-        $this->db->insert('buku', $data);
+        $this->db->insert('user', $data);
     }
     public function updateBuku($data = null, $where = null)
     {
-        $this->db->update('buku', $data, $where);
+        $this->db->update('user', $data, $where);
     }
     public function hapusBuku($where = null)
     {
-        $this->db->delete('buku', $where);
+        $this->db->delete('user', $where);
     }
     public function total($field, $where)
     {
@@ -29,8 +30,12 @@ class ModelBuku extends CI_Model
         if (!empty($where) && count($where) > 0) {
             $this->db->where($where);
         }
-        $this->db->from('buku');
+        $this->db->from($this->table);
         return $this->db->get()->row($field);
+    }
+    public function order($data)
+    {
+        $this->db->insert('buku', $data);
     }
 
     //manajemen kategori
@@ -46,9 +51,10 @@ class ModelBuku extends CI_Model
     {
         $this->db->insert('kategori', $data);
     }
-    public function hapusKategori($where = null)
+    public function hapusKategori($id)
     {
-        $this->db->delete('kategori', $where);
+        $this->db->where('id', $id);
+        return $this->db->delete('buku');
     }
     public function updateKategori($where = null, $data = null)
     {

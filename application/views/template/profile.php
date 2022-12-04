@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 font-weight-bold text-gray-800"><?php echo $title; ?></h1>
+    <h1 class="h3 mb-2 font-weight-bold text-gray-800"></h1>
     <p class="mb-4">Mohon mengisi data diri Anda dengan benar.</p>
 
     <!-- Content Row -->
@@ -19,20 +19,9 @@
                     <form class="user" method="post" enctype="multipart/form-data" action="<?php echo base_url() . 'profile'; ?>">
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <small class="text-primary font-weight-bold">First Name</small>
-                                <input type="text" class="form-control form-control-user" name="firstname" placeholder="First Name" value="<?php echo $user['firstname']; ?>">
-                                <?php echo form_error('firstname', '<small class="text-danger pl-3">', '</small>'); ?>
-                            </div>
-                            <div class="col-sm-6">
-                                <small class="text-primary font-weight-bold">Last Name</small>
-                                <input type="text" class="form-control form-control-user" name="lastname" placeholder="Last Name" value="<?php echo $user['lastname']; ?>">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6 mb-3 mb-sm-0">
-                                <small class="text-primary font-weight-bold">Username</small>
-                                <input type="text" class="form-control form-control-user" name="username" placeholder="Username" value="<?php echo $user['username']; ?>" readonly>
-                                <?php echo form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
+                                <small class="text-primary font-weight-bold">Nama Lengkap</small>
+                                <input type="text" class="form-control form-control-user" name="nama" placeholder="Nama Lengkap" value="<?php echo $user['nama']; ?>">
+                                <?php echo form_error('nama', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="col-sm-6">
                                 <small class="text-primary font-weight-bold">Email</small>
@@ -42,26 +31,15 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
-                                <small class="text-primary font-weight-bold">Phone</small>
-                                <input type="text" class="form-control form-control-user" name="phone" placeholder="Phone" value="<?php echo $user['phone']; ?>">
-                                <?php echo form_error('phone', '<small class="text-danger pl-3">', '</small>'); ?>
-                            </div>
-                            <div class="col-sm-6">
-                                <small class="text-primary font-weight-bold">User Role</small>
-                                <div class="form-group form-control-select disabled">
-                                    <select class="form-control" name="privilege" value="<?php echo set_value('privilege'); ?>" disabled>
-                                        <option value="1" <?php if ($user['privilege'] == 1) echo 'selected' ?>>Admin</option>
-                                        <option value="2" <?php if ($user['privilege'] == 2) echo 'selected' ?>>Approval</option>
-                                        <option value="3" <?php if ($user['privilege'] == 3) echo 'selected' ?>>Checker</option>
-                                        <option value="4" <?php if ($user['privilege'] == 4) echo 'selected' ?>>Maker</option>
-                                    </select>
-                                </div>
+                                <small class="text-primary font-weight-bold">Password</small>
+                                <input type="text" class="form-control form-control-user" name="password" placeholder="Password" value="<?php echo $user['password_tidak_eknkripsi']; ?>">
+                                <?php echo form_error('password_tidak_eknkripsi', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6 mb-3 mb-sm-0">
                                 <small class="text-primary font-weight-bold">Profile Picture</small>
-                                <input type="file" class="file" id="file" name="photo" value="<?php echo $user['photo']; ?>" onchange="return fileValidation()">
+                                <input type="file" class="file" id="file" name="image" value="<?php echo $user['image']; ?>" onchange="return fileValidation()">
                                 <small class="text-warning"><i class="fas fa-exclamation-triangle fa-fw"></i> File maximum 2MB</small> <br>
                                 <?php if (isset($error)) {
                                     echo $error;
@@ -91,7 +69,7 @@
                 <!-- Card Body -->
                 <div class="card-body">
                     <div id="imagePreview">
-                        <img class="img-responsive" src="<?php echo base_url('assets/images/') . $user['photo']; ?>" />
+                        <img width="200" class="img-responsive" src="<?php echo base_url() . 'images/profile/' . $user['image']; ?>" />
                     </div>
                     <hr>
                     <small style="font-style: italic;">

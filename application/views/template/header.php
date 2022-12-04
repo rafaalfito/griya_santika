@@ -53,7 +53,7 @@
                         <a class="nav-link" href="#contac">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url('')?>">Pemesanan</a>
+                        <a class="nav-link" href="<?= base_url('home/order') ?>">Beli</a>
                     </li>
                 </ul>
             </div>

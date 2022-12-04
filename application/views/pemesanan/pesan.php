@@ -21,7 +21,9 @@
                 <td><?= $a['subject']; ?></td>
                 <td><?= $a['message']; ?></td>
                 <td><?= date('j F Y', strtotime($a['created'])); ?></td>
-                <td><Button>Edit</Button></td>
+                <td>
+                    <a href="<?= base_url('pesan/hapuscontact') . '/' . $a['id']; ?>" onclick="return confirm('Kamu yakin akan menghapus <?= $judul . ' ' . $a['firstname']; ?> ?');" class="badge badge-danger"><i class="fas fa-trash"></i> Hapus</a>
+                </td>
             </tr>
         <?php } ?>
     </tbody>

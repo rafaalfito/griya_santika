@@ -27,7 +27,7 @@ justify-content-center" href="index.html">
 
     <!-- Heading -->
     <div class="sidebar-heading mt-3">
-        Master Data
+        User Activiity
     </div>
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
@@ -40,9 +40,9 @@ justify-content-center" href="index.html">
     </li>
     <li class="nav-item">
         <a class="nav-link pb-0" href="<?=
-                                        base_url('buku'); ?>">
+                                        base_url('pesan/pemesanan'); ?>">
             <i class="fa fa-fw fa book"></i>
-            <span></span></a>
+            <span>Pemesanan</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link pb-0" href="<?=

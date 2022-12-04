@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class ModelUser extends CI_Model
+class ModelAdmin extends CI_Model
 {
     public function simpanData($data = null)
     {
@@ -8,7 +8,8 @@ class ModelUser extends CI_Model
     }
     public function cekData($where = null)
     {
-        return $this->db->get_where('admin', $where);
+        return $this->db->get_where('admin', $where)->row_array();
+        //$this->db->last_query();
     }
     public function getUserWhere($where = null)
     {
@@ -17,6 +18,10 @@ class ModelUser extends CI_Model
     public function getContactWhere()
     {
         return $this->db->get_where('contact');
+    }
+    public function getBuku()
+    {
+        return $this->db->get_where('buku');
     }
     public function cekUserAccess($where = null)
     {

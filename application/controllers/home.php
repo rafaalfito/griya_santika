@@ -63,4 +63,15 @@ class Home extends CI_Controller
 		$this->load->view('Ukuran/big_view');
 		$this->load->view('template/footer');
 	}
+
+	public function order()
+	{
+		$data = array(
+			//'title' => 'Contact Page',
+			'css'   => array('style'),
+			'js'    => array(),
+			'result'   => ''
+		);
+		$this->load->view('user/form_Beli');
+	}
 }

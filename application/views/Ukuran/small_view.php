@@ -148,6 +148,7 @@
                     </svg>
                     <br>
                     <a href="https://web.whatsapp.com/">Ade Kurniawan @ 085771522432</a>
+                    <br>
                 </div>
             </div>
         </div>

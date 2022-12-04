@@ -4,6 +4,8 @@ class Autentifikasi extends CI_Controller
 {
     public function index()
     { //jika statusnya sudah login, maka tidak bisa mengakses halaman login alias dikembalikan ke tampilan user
+
+
         if ($this->session->userdata('email')) {
             //redirect('user');
         }
@@ -45,8 +47,8 @@ class Autentifikasi extends CI_Controller
 
         $password = $this->input->post('password');
 
-        $this->load->model('ModelUser');
-        $admin = $this->ModelUser->cekData(['email' => $email])->row_array();
+        $this->load->model('ModelAdmin');
+        $admin = $this->ModelAdmin->cekData(['email' => $email]);
         $pass = md5($this->input->post('password'));
 
         //jika usernya ada
@@ -62,6 +64,7 @@ class Autentifikasi extends CI_Controller
                         'role_id' => $admin['role_id']
                     ];
                     $this->session->set_userdata($data);
+                    //sspre($_SESSION);
 
                     if ($admin['role_id'] == 1) {
                         redirect('admin');
@@ -141,8 +144,8 @@ terdaftar!!</div>');
                 'is_active' => 1,
                 'tanggal_input' => time()
             ];
-            $this->load->model('ModelUser');
-            $this->ModelUser->simpanData($data); //menggunakan model
+            $this->load->model('ModelAdmin');
+            $this->ModelAdmin->simpanData($data); //menggunakan model
 
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! akun member anda sudah dibuat. Silahkan Aktivasi Akun anda</div>');
             redirect('autentifikasi');

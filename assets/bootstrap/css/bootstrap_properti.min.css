@@ -131,3 +131,10 @@ input [type=radio]:checked+.tab-control {
 section {
     padding-top: 5rem;
 }
+
+.form_beli {
+    position: absolute;
+    /* background: url('../../../images/bakground.jpg') no-repeat; */
+    width: 100%;
+    height: 100%;
+}

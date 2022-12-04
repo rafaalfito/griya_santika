@@ -35,7 +35,7 @@
                         <a class="nav-link" href="#terdekat">Lokasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contac">Contac</a>
+                        <a class="nav-link" href="<?= base_url('user/index') ?>">Conta</a>
                     </li>
                 </ul>
             </div>

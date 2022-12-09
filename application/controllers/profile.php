@@ -6,6 +6,7 @@ class Profile extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        check_login();
         $this->load->model('ModelAdmin');
         $this->load->helper(array('form', 'url'));
     }

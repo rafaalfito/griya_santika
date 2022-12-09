@@ -79,6 +79,7 @@
 									</div>
 								</div>
 								<div class="col-sm-12 text-center">
+									<br>
 									<button type="submit" class="btn btn-primary btn-kirim"><i class="fa fa-envelope-o"></i> Send message</button>
 								</div>
 							</div>

@@ -33,10 +33,6 @@ class ModelPemesanan extends CI_Model
         $this->db->from($this->table);
         return $this->db->get()->row($field);
     }
-    public function order($data)
-    {
-        $this->db->insert('buku', $data);
-    }
 
     //manajemen kategori
     public function getKategori()

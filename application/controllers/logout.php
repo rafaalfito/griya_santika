@@ -12,6 +12,6 @@ class Logout extends CI_Controller
         );
         $this->session->set_userdata($session);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">You have been logged out!</div>');
-        redirect('home');
+        redirect('autentifikasi');
     }
 }

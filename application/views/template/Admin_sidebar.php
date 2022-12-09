@@ -44,12 +44,6 @@ justify-content-center" href="index.html">
             <i class="fa fa-fw fa book"></i>
             <span>Pemesanan</span></a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link pb-0" href="<?=
-                                        base_url('user/anggota'); ?>">
-            <i class="fa fa-fw fa book"></i>
-            <span></span></a>
-    </li>
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

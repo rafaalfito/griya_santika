@@ -2,7 +2,7 @@
 
 class Logout extends CI_Controller
 {
-
+    //Keluar 
     public function index()
     {
 

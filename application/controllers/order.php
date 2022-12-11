@@ -8,7 +8,7 @@ class order extends CI_Controller
         $this->load->model('model_order');
     }
 
-
+    //Data Yang dari Form Pembelian masuk Ke sisni
     public function index()
     {
         $data = array(
